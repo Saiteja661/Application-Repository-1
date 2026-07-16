@@ -1,0 +1,11 @@
+{
+  "name": "social-service",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'define lint script for social-service'",
+    "test": "echo 'define test script for social-service'",
+    "build": "echo 'define build script for social-service'",
+    "start": "node src/index.js"
+  }
+}

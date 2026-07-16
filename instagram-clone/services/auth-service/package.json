@@ -1,0 +1,11 @@
+{
+  "name": "auth-service",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'define lint script for auth-service'",
+    "test": "echo 'define test script for auth-service'",
+    "build": "echo 'define build script for auth-service'",
+    "start": "node src/index.js"
+  }
+}

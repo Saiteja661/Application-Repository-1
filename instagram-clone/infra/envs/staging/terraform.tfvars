@@ -1,0 +1,20 @@
+vpc_cidr_block         = "10.20.0.0/16"
+availability_zones     = ["us-east-1a", "us-east-1b"]
+vpc_id                 = "vpc-placeholder-staging"
+private_subnet_ids     = ["subnet-placeholder-a", "subnet-placeholder-b"]
+ecs_cluster_name       = "instagram-staging-cluster"
+# Smaller instance sizes in staging than prod, but closer to production than dev.
+ecs_desired_count      = 2
+ecs_cpu                = 512
+ecs_memory             = 1024
+ecs_container_image    = "000000000000.dkr.ecr.us-east-1.amazonaws.com/instagram-staging-auth:latest"
+rds_engine             = "postgres"
+rds_instance_class     = "db.t3.small"
+rds_allocated_storage  = 50
+rds_db_name            = "instagram_staging"
+dynamodb_billing_mode  = "PAY_PER_REQUEST"
+dynamodb_hash_key      = "id"
+cloudfront_bucket_name = "instagram-staging-static-assets"
+cloudfront_price_class = "PriceClass_100"
+monitoring_alarm_email = "alerts-staging@example.com"
+monitoring_dashboard_name = "instagram-staging"

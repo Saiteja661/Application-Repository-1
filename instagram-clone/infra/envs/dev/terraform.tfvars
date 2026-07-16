@@ -1,0 +1,20 @@
+vpc_cidr_block         = "10.10.0.0/16"
+availability_zones     = ["us-east-1a", "us-east-1b"]
+vpc_id                 = "vpc-placeholder-dev"
+private_subnet_ids     = ["subnet-placeholder-a", "subnet-placeholder-b"]
+ecs_cluster_name       = "instagram-dev-cluster"
+# Smaller instance sizes in dev to keep costs and blast radius low.
+ecs_desired_count      = 1
+ecs_cpu                = 256
+ecs_memory             = 512
+ecs_container_image    = "000000000000.dkr.ecr.us-east-1.amazonaws.com/instagram-dev-auth:latest"
+rds_engine             = "postgres"
+rds_instance_class     = "db.t3.micro"
+rds_allocated_storage  = 20
+rds_db_name            = "instagram_dev"
+dynamodb_billing_mode  = "PAY_PER_REQUEST"
+dynamodb_hash_key      = "id"
+cloudfront_bucket_name = "instagram-dev-static-assets"
+cloudfront_price_class = "PriceClass_100"
+monitoring_alarm_email = "alerts-dev@example.com"
+monitoring_dashboard_name = "instagram-dev"

@@ -1,0 +1,11 @@
+{
+  "name": "posts-service",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'define lint script for posts-service'",
+    "test": "echo 'define test script for posts-service'",
+    "build": "echo 'define build script for posts-service'",
+    "start": "node src/index.js"
+  }
+}

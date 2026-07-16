@@ -1,0 +1,20 @@
+vpc_cidr_block         = "10.30.0.0/16"
+availability_zones     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+vpc_id                 = "vpc-placeholder-prod"
+private_subnet_ids     = ["subnet-placeholder-a", "subnet-placeholder-b", "subnet-placeholder-c"]
+ecs_cluster_name       = "instagram-prod-cluster"
+# Production uses the largest instance sizes and the highest service count.
+ecs_desired_count      = 3
+ecs_cpu                = 1024
+ecs_memory             = 2048
+ecs_container_image    = "000000000000.dkr.ecr.us-east-1.amazonaws.com/instagram-prod-auth:latest"
+rds_engine             = "postgres"
+rds_instance_class     = "db.m6g.large"
+rds_allocated_storage  = 100
+rds_db_name            = "instagram_prod"
+dynamodb_billing_mode  = "PAY_PER_REQUEST"
+dynamodb_hash_key      = "id"
+cloudfront_bucket_name = "instagram-prod-static-assets"
+cloudfront_price_class = "PriceClass_200"
+monitoring_alarm_email = "alerts-prod@example.com"
+monitoring_dashboard_name = "instagram-prod"
